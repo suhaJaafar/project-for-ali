@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.js" integrity="sha256-2JRzNxMJiS0aHOJjG+liqsEOuBb6++9cY4dSOyiijX4=" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+<div class="container-before-nav">
+    <h1><span>MY</span> LOGO</h1>
+    <div class="all-social-media">
+    <div class="social-before-nav">
+        <div><i class="fas fa-map-marker-alt socialbnav"></i></div>
+    <div>Address:
+        <div>Iraq, Baghdad</div>
+    </div>
+    </div>
+
+    <div class="social-before-nav">
+        <div><i class="far fa-envelope socialbnav"></i></div>
+        <div>Email:
+            <div>mazad_cars@mazad.com</div>
+        </div>
+        </div>
+        
+        <div class="social-before-nav">
+            <div><i class="fas fa-phone-square-alt socialbnav"></i></div>
+            <div>Mobile:
+                <div>+964 770 434 33 44</div>
+            </div>
+            </div>
+    </div>
+</div>
+<nav>
+    <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+<ul class="nav-ul">
+    <li class="nav-li"><a class="nav-a" href="#">Home</a></li>
+    <li class="nav-li"><a class="nav-a" href="#">Car For Sale</a></li>
+    <li class="nav-li nav-li3" id="nav-li3" @mouseover="listThree = true" @mouseleave="listThree = false">
+        <a class="nav-a" href="#">Services <i class="fa fa-caret-down down1"></i></a>
+        <transition name="fade" class="drop">
+        
+            <ul class="sub-drop sub-drop3" v-if="listThree" @click="listThree = false">
+              
+              <li><a href="#">Menu Item</a></li>
+              <li><a href="#">Menu Item</a></li>
+              <li><a href="#">Menu Item</a></li>
+              <li><a href="#">Menu Item</a></li>
+              <li><a href="#">Menu Item</a></li>
+            </ul>
+          
+           </transition>
+    </li>
+    <li class="nav-li" id="nav-li4"><a class="nav-a" href="#">About</a></li>
+</ul>
+<button class="nav-button">Login</button>
+</nav>
+<section class="section-1 slider">
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img
+          src="https://images.unsplash.com/photo-1501066927591-314112b5888e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+          style="width:100%">
+          <div class="text">Car One</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img
+          src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80"
+          style="width:100%">
+          <div class="text">Car Two</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img
+          src="https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+          style="width:100%">
+          <div class="text">Car Three</div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+
+</section>
+<section class="section-2 services">
+    <h1>Services</h1>
+    <div class="grid-services">
+<div class="oneside-services side-services">
+    <div class="shape-services">
+        <i class="fas fa-shipping-fast icon-ser"></i>
+        <span>Shipping</span>
+    </div>
+
+    <div class="shape-services">
+        <i class="far fa-newspaper icon-ser"></i>
+        <span>Clearance</span>
+    </div>
+
+    <div class="shape-services">
+        <i class="fas fa-globe-europe icon-ser"></i>
+        <span>Destinations</span>
+    </div>
+</div>
+
+<div class="towside-services side-services">
+    <div class="div-img">
+        <img src="https://seahorseline.com/_images/services.jpg" id="earth" alt="earth">
+
+    </div>
+    <div class="shape-services">
+    <i class="fas fa-hand-holding-usd icon-ser"></i>
+    <span class="sell-your-car-text">Sell Your Car</span>
+</div>
+
+</div>
+
+<div class="threeside-services side-services">
+    <div class="shape-services">
+        <i class="fas fa-truck-pickup icon-ser"></i>
+        <span>Towing</span>
+    </div>
+    <div class="shape-services">
+        <i class="fas fa-truck icon-ser"></i>
+        <span>Unloading</span>
+    </div>
+    <div class="shape-services">
+        <i class="fas fa-gavel icon-ser"></i>
+        <span>Auctions</span>
+    </div>
+</div>
+</div>
+</section>
+<section class="section-3">
+<div class="about-us">
+<div class="text-about-as">
+        <h1><i class="fas fa-globe"></i> About As</h1>
+
+        <p>Lorem ipsum dolor aut dignissimos facere! Ex accusantium, saepe, cupiditate atque architecto cumque quisquam illo perferendis assumenda nostrum quae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi possimus distinctio ex laudantium rerum fuga qui quas deleniti esse illum voluptates quia nulla, ullam praesentium adipisci iure fugit ipsum expedita. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero non et ad dolor odit provident quia nostrum sunt consectetur ratione, officiis aspernatur necessitatibus numquam aliquam. Cum sapiente mollitia nobis saepe! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla a, pariatur voluptate cum nam ratione ad temporibus aperiam saepe, vel facere quos! Nihil, nesciunt iure. Iusto culpa quibusdam non id!</p>
+</div>
+<img src="https://seahorseline.com/_images/sea14.jpg" class="aboutus__img">
+</div>
+</section>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
